@@ -15,6 +15,7 @@ const setUser = (user) => {
 async function refreshToken() {
         return fetch(`${backURL}/user/refresh_token`, {
         method: 'POST',
+        mode: 'cors',
         credentials: 'include'
       })
         .then(response => response.json())
